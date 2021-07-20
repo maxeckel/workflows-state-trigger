@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace MaxEckel\WorkflowsStateTrigger\Tests;
 
 class ExampleTest extends TestCase
 {

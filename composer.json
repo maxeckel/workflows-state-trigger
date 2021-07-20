@@ -1,24 +1,26 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "maxeckel/workflows-state-trigger",
+    "description": "This is my package WorkflowsStateTrigger",
     "keywords": [
-        ":vendor_name",
+        "maxeckel",
         "laravel",
-        "package_slug"
+        "workflows-state-trigger"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/maxeckel/workflows-state-trigger",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Max Eckel",
+            "email": "max.eckel@outlook.de",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
+        "illuminate/contracts": "^8.37",
+        "spatie/laravel-model-states": "^2.1",
         "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "the42coders/workflows": "0.0.6-beta"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
@@ -30,13 +32,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "MaxEckel\\WorkflowsStateTrigger\\": "src",
+            "MaxEckel\\WorkflowsStateTrigger\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "MaxEckel\\WorkflowsStateTrigger\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +52,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "MaxEckel\\WorkflowsStateTrigger\\WorkflowsStateTriggerServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "WorkflowsStateTrigger": "MaxEckel\\WorkflowsStateTrigger\\WorkflowsStateTriggerFacade"
             }
         }
     },

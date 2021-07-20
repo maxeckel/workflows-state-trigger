@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace MaxEckel\WorkflowsStateTrigger;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use MaxEckel\WorkflowsStateTrigger\Commands\WorkflowsStateTriggerCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class WorkflowsStateTriggerServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('workflows-state-trigger')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_workflows-state-trigger_table')
+            ->hasCommand(WorkflowsStateTriggerCommand::class);
     }
 }

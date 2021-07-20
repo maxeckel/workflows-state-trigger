@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace MaxEckel\WorkflowsStateTrigger\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class WorkflowsStateTriggerCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'workflows-state-trigger';
 
     public $description = 'My command';
 
