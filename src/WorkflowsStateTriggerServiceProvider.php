@@ -2,9 +2,9 @@
 
 namespace MaxEckel\WorkflowsStateTrigger;
 
+use MaxEckel\WorkflowsStateTrigger\Commands\WorkflowsStateTriggerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use MaxEckel\WorkflowsStateTrigger\Commands\WorkflowsStateTriggerCommand;
 
 class WorkflowsStateTriggerServiceProvider extends PackageServiceProvider
 {

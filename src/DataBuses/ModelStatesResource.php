@@ -34,7 +34,7 @@ class ModelStatesResource implements Resource
 
         $variables = [];
         foreach ($classes as $class) {
-            $model = new $class;
+            $model = new $class();
             foreach (Schema::getColumnListing($model->getTable()) as $item) {
                 $variables[$class.'->'.$item] = $item;
             }
@@ -47,5 +47,4 @@ class ModelStatesResource implements Resource
     {
         // TODO: Implement loadResourceIntelligence() method.
     }
-
 }
