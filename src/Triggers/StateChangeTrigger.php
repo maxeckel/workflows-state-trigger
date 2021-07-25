@@ -11,14 +11,28 @@ class StateChangeTrigger extends Trigger
 
     public static $fields = [
         'Class' => 'class',
+        'From State' => 'states',
+        'To State' => 'states',
     ];
 
     public function inputFields(): array
     {
+        $states = collect();
+
+        foreach(config('workflows.triggers.StateChanges.classes') as $key => $value) {
+            $states->merge($value['states']);
+        }
+
         $fields = [
             'class' => DropdownField::make(config('workflows.triggers.StateChanges.classes')),
+            'states' => DropdownField::make($states->toArray()),
         ];
 
         return $fields;
+    }
+
+    public static function getTranslation(): string
+    {
+        return "State Change Trigger";
     }
 }
