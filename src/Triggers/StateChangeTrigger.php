@@ -19,7 +19,7 @@ class StateChangeTrigger extends Trigger
     {
         $states = collect();
 
-        foreach(config('workflows.triggers.StateChanges.classes') as $key => $value) {
+        foreach (config('workflows.triggers.StateChanges.classes') as $key => $value) {
             $states->merge($value['states']);
         }
 
